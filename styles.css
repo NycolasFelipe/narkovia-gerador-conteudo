@@ -1,0 +1,17 @@
+main {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 500px;
+}
+
+main h1 {
+  font-size: 1.5rem;
+}
+
+main h2 {
+  font-size: 1.3rem;
+}
+
+main h3 {
+  font-size: 1.1rem;
+}
