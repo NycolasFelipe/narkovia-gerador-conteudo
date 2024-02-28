@@ -1,11 +1,12 @@
 import removeDiacritics from "./removeDiacritics.js";
 
-function downlaodJsonConduta(titulo, descricao, ganhos) {
+function downloadJsonConduta(tipo, titulo, descricao, ganhos) {
   //Build a JSON array containing Customer records.
-  let id = removeDiacritics(titulo).toLowerCase();
+  let id = removeDiacritics(titulo).toLowerCase().replaceAll(" ", "-").replaceAll("_", "-");
   let conduta = {
-    titulo: titulo,
     id: id,
+    tipo: removeDiacritics(tipo).toLowerCase(),
+    titulo: titulo,
     descricao: descricao.replaceAll("\n", " "),
     ganhos: ganhos
   }
@@ -34,4 +35,4 @@ function downlaodJsonConduta(titulo, descricao, ganhos) {
 
 }
 
-export default downlaodJsonConduta;
+export default downloadJsonConduta;
